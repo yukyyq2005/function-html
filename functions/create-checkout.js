@@ -5,7 +5,7 @@ const stripe = new Stripe('sk_test_51PcjxQB24bjbNkTbuJgWcro7epMqu483jc2ZBzRhE1w6
 
 export async function onRequest(context) {
   const { request } = context;
-  const YOUR_DOMAIN = "http://localhost:8787";
+  const YOUR_DOMAIN = "https://pipiform.com/";
     const session = await stripe.checkout.sessions.create({
       line_items: [{
         price_data: {
