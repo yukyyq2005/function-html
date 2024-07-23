@@ -61,12 +61,11 @@ async function handleCreatePaymentIntent(request, env) {
   // const formData = await request.formData();
   // const amount = parseInt(formData.get('amount'), 10);
   console.log('***** end *****');
-  const payment_method_types = "card";
-  const currency = "usd";
-  const YOUR_DOMAIN = "http://localhost:8787";
+  // const payment_method_types = "card";
+  // const currency = "usd";
 
   try {
-
+    const YOUR_DOMAIN = "http://localhost:8787";
     const session = await stripe.checkout.sessions.create({
       line_items: [{
         price_data: {
